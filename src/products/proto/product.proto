@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package product;
+
+service ProductService {
+   rpc Create(ProductRequest) returns (ProductResponse){}
+//    rpc Update() returns (){}
+}
+
+message ProductRequest{
+    string thumbnail = 1;
+
+    string name = 2;
+
+    float price = 3;
+
+    string makings = 4;
+
+    string availability = 5;
+
+    string volume = 6;
+
+    string other = 7;
+}
+
+message ProductResponse {
+    string id = 1 ;
+
+    string thumbnail = 2;
+
+    string name = 3;
+
+    float price = 4;
+
+    string makings = 5;
+
+    string availability = 6;
+
+    string volume = 7;
+
+    string other = 8;
+}

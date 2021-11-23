@@ -1,0 +1,48 @@
+POST http://localhost:3000/products
+Content-type: application/json
+
+{
+    "thumbnail": "teste",
+    "name": "produto teste",
+    "price": 50.00,
+    "makings": "teste ingredientes",
+    "availability": "nota 8",
+    "volume": "1",
+    "other": "Muito bom !"
+}
+
+###
+GET http://localhost:3000/products
+
+###
+GET http://localhost:3000/products/ef3ab175-f14b-4570-a396-7311678e1b63
+
+###
+PATCH http://localhost:3000/products/ef3ab175-f14b-4570-a396-7311678e1b63
+Content-type: application/json
+
+{
+    "thumbnail": "teste 2",
+    "name": "produto teste",
+    "price": 50.00,
+    "makings": "teste ingredientes",
+    "availability": "nota 8",
+    "volume": "1",
+    "other": "Muito bom !"
+}
+
+###
+DELETE http://localhost:3000/products/ef3ab175-f14b-4570-a396-7311678e1b63
+
+# PUT (Completa) vs PATCH (Parcial)
+# 200 OK
+# 201 Created
+
+###
+POST http://localhost:3000/product-grpc-clients
+Content-type: application/json
+
+{
+    "name": "produto teste",
+    "price": 10.02
+}
