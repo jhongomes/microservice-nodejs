@@ -38,6 +38,50 @@ DELETE http://localhost:3000/products/ef3ab175-f14b-4570-a396-7311678e1b63
 # 200 OK
 # 201 Created
 
+
+###
+POST http://localhost:3000/pharmacy
+Content-type: application/json
+
+{
+
+  "soon": "logoteste",
+  "name": "Farmacia Brasil Teste",
+  "cnpj": "23.6565.6566/45.12",
+  "address": "Rua Cosme Ferreira, n°1000",
+  "opening_hours": "2021-11-12 20:04:00+00",
+  "accountable": "Jhonatan Gomes",
+  "telephone": "991618733",
+  "other": "Farmacia sede"
+
+}
+
+###
+GET  http://localhost:3000/pharmacy/
+
+###
+GET  http://localhost:3000/pharmacy/
+
+###
+PATCH http://localhost:3000/pharmacy/dd5beaf5-db45-4715-8df2-cfb10f09f403
+Content-type: application/json
+
+{
+
+  "soon": "logo teste",
+  "name": "Farmacia Brasil Teste",
+  "cnpj": "23.6565.6566/45.12",
+  "address": "Rua Cosme Ferreira, n°1000",
+  "opening_hours": "2021-11-12 20:04:00+00",
+  "accountable": "Jhonatan Gomes",
+  "telephone": "991618733",
+  "other": "Farmacia sede"
+
+}
+
+###
+DELETE http://localhost:3000/pharmacy/dd5beaf5-db45-4715-8df2-cfb10f09f403
+
 ###
 POST http://localhost:3000/product-grpc-clients
 Content-type: application/json

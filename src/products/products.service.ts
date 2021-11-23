@@ -30,9 +30,11 @@ export class ProductsService {
       id,
       updateProductDto,
     );
+
     if (!updateResult.affected) {
       throw new EntityNotFoundError(Product, id);
     }
+    
     return this.productRepository.findOne(id);
   }
 

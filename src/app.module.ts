@@ -5,10 +5,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
+import { PharmacyModule } from './pharmacy/pharmacy.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
+    PharmacyModule,
     ProductsModule,
     TypeOrmModule.forRoot({
       type: process.env.TYPEORM_CONNECTION as any,
